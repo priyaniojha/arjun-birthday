@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Arjun 🎀</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink:#ff80a8;
+  --light-pink:#ffd5e4;
+  --peach:#ffc5a9;
+  --yellow:#ffe58e;
+  --purple:#d8c1f0;
+  --green:#cce8c5;
+  --cream:#fff9ef;
+  --ink:#573847;
+}
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  color:var(--ink);
+  font-family:'Nunito',sans-serif;
+  background:
+    radial-gradient(circle at 5% 10%,#ffdce9,transparent 28%),
+    radial-gradient(circle at 95% 40%,#fff0ba,transparent 28%),
+    var(--cream);
+  overflow-x:hidden;
+}
+
+.hero {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:65px 20px;
+  position:relative;
+}
+
+.sticker {
+  position:absolute;
+  font-size:clamp(28px,5vw,48px);
+  animation:float 3s ease-in-out infinite;
+}
+
+.s1 {top:12%;left:12%;transform:rotate(-15deg)}
+.s2 {top:20%;right:12%;animation-delay:.5s}
+.s3 {bottom:18%;left:15%;animation-delay:1s}
+.s4 {bottom:14%;right:14%;animation-delay:.8s}
+.s5 {top:42%;left:5%;animation-delay:.3s}
+.s6 {top:48%;right:5%;animation-delay:1.2s}
+
+@keyframes float {
+  0%,100% {translate:0 0;rotate:-8deg}
+  50% {translate:0 -13px;rotate:8deg}
+}
+
+.tag {
+  background:white;
+  border:2px dashed var(--pink);
+  border-radius:30px;
+  padding:10px 18px;
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:800;
+  transform:rotate(-3deg);
+  box-shadow:3px 4px 0 #ffc0d5;
+}
+
+h1 {
+  font-family:'Pacifico',cursive;
+  font-weight:400;
+  font-size:clamp(43px,10vw,86px);
+  color:#ef6695;
+  line-height:1.3;
+  text-shadow:3px 4px 0 #ffe7a5;
+  margin:28px 0 12px;
+}
+
+h1 span {
+  display:block;
+  color:#b18acb;
+}
+
+.hero p {
+  max-width:440px;
+  line-height:1.9;
+  margin:10px 0 28px;
+}
+
+.btn {
+  background:var(--pink);
+  color:white;
+  border:0;
+  border-radius:30px;
+  padding:14px 24px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 5px 0 #d95283;
+  transition:.2s;
+}
+
+.btn:hover { transform:translateY(-3px) rotate(-1deg); }
+
+section { padding:65px 20px; }
+
+.heading {
+  text-align:center;
+  margin:0 auto 35px;
+}
+
+.heading small {
+  color:#db648f;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:11px;
+}
+
+.heading h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,6vw,43px);
+  margin:12px 0;
+}
+
+.heading p {
+  max-width:470px;
+  margin:auto;
+  line-height:1.8;
+}
+
+.cards {
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:26px;
+}
+
+.card {
+  min-height:220px;
+  position:relative;
+  padding:27px 22px;
+  border:2px solid #ffffffc9;
+  border-radius:5px;
+  box-shadow:0 8px 20px #ac78851c;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:transform .25s;
+}
+
+.card:hover {transform:translateY(-5px) rotate(1deg)}
+
+.card:nth-child(1) {
+  background:#ffd9e5;
+  transform:rotate(-2deg);
+}
+.card:nth-child(2) {
+  background:#fff0b7;
+  transform:rotate(2deg);
+}
+.card:nth-child(3) {
+  background:#dcefd5;
+  transform:rotate(1.5deg);
+}
+.card:nth-child(4) {
+  background:#eadcfb;
+  transform:rotate(-1.5deg);
+}
+
+.tape {
+  position:absolute;
+  top:-10px;
+  left:calc(50% - 37px);
+  width:74px;
+  height:22px;
+  background:#ffffffa6;
+  transform:rotate(-4deg);
+}
+
+.card .emoji {
+  font-size:43px;
+  margin-bottom:10px;
+}
+
+.card h3 {
+  font-family:'Pacifico',cursive;
+  font-size:21px;
+  font-weight:400;
+  margin:0 0 10px;
+  color:#a54d78;
+}
+
+.card p {
+  font-size:14px;
+  line-height:1.8;
+  margin:0;
+}
+
+.mini {
+  display:inline-block;
+  margin-top:15px;
+  font-size:13px;
+  font-weight:800;
+}
+
+.washi-note {
+  max-width:650px;
+  margin:45px auto 0;
+  padding:24px;
+  background:var(--yellow);
+  text-align:center;
+  line-height:1.9;
+  box-shadow:4px 5px 0 #f1d37b;
+  transform:rotate(-1deg);
+}
+
+.letter-section { background:#ffe2eb; }
+
+.letter {
+  max-width:650px;
+  margin:auto;
+  background:#fffdf7;
+  border:2px dashed #eaa1bb;
+  padding:32px 24px;
+  text-align:center;
+  box-shadow:7px 7px 0 #f5b5ca;
+}
+
+.envelope {
+  font-size:58px;
+  margin-bottom:12px;
+  animation:float 3s ease-in-out infinite;
+}
+
+.letter h3 {
+  font-family:'Pacifico',cursive;
+  font-size:29px;
+  color:#df6792;
+  font-weight:400;
+  margin:10px 0;
+}
+
+#letterText {
+  display:none;
+  text-align:left;
+  line-height:2;
+  margin-top:24px;
+  animation:appear .5s ease;
+}
+
+#letterText.open {display:block}
+
+@keyframes appear {
+  from {opacity:0;transform:translateY(10px)}
+  to {opacity:1;transform:translateY(0)}
+}
+
+.wishes {
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+.wish {
+  padding:25px 15px;
+  text-align:center;
+  border-radius:12px;
+  line-height:1.8;
+}
+
+.wish:nth-child(1){background:#ffd8e6}
+.wish:nth-child(2){background:#fff0b8}
+.wish:nth-child(3){background:#d9ecd3}
+
+.wish .emoji {font-size:34px;display:block;margin-bottom:10px}
+.wish p {font-size:14px;margin-bottom:0}
+
+.final {
+  text-align:center;
+  padding:80px 20px;
+}
+
+.final h2 {
+  font-family:'Pacifico',cursive;
+  color:#e76896;
+  font-size:clamp(34px,7vw,54px);
+  font-weight:400;
+}
+
+.final p {line-height:1.9}
+
+footer {
+  background:#ffefd7;
+  text-align:center;
+  padding:23px 12px;
+  font-size:13px;
+}
+
+.confetti {
+  position:fixed;
+  top:-30px;
+  z-index:10;
+  pointer-events:none;
+  animation:fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {transform:translateY(110vh) rotate(700deg);opacity:0}
+}
+
+@media(max-width:550px) {
+  .cards {gap:20px 13px}
+  .card {padding:23px 12px;min-height:220px}
+  .card h3 {font-size:17px}
+  .card p {font-size:12px}
+  .card .emoji {font-size:35px}
+  .wishes {grid-template-columns:1fr}
+  .s1 {left:5%}
+  .s2 {right:5%}
+  .s5 {left:2%}
+  .s6 {right:2%}
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <span class="sticker s1">🎀</span>
+  <span class="sticker s2">🌷</span>
+  <span class="sticker s3">💗</span>
+  <span class="sticker s4">⭐</span>
+  <span class="sticker s5">✿</span>
+  <span class="sticker s6">🦋</span>
+
+  <div class="tag">A LITTLE SURPRISE FOR YOU ♡</div>
+
+  <h1>Happy Birthday <span>Arjun!</span></h1>
+
+  <p>
+    A little scrapbook full of birthday magic,
+    cute things and lots of love — made especially for you. 🎂
+  </p>
+
+  <button class="btn"
+    onclick="document.getElementById('scrapbook').scrollIntoView({behavior:'smooth'})">
+    Open Your Surprise ✨
+  </button>
+</header>
+
+<section id="scrapbook">
+  <div class="heading">
+    <small>Little pieces of happiness</small>
+    <h2>Your scrapbook 🌷</h2>
+    <p>
+      No pictures needed. Just a few colourful cards,
+      tiny doodles and birthday wishes for you. 💌
+    </p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <span class="tape"></span>
+      <span class="emoji">🌼</span>
+      <h3>A little sunshine</h3>
+      <p>Wishing you days that feel warm, happy and full of good surprises.</p>
+      <span class="mini">a tiny wish for you ♡</span>
+    </article>
+
+    <article class="card">
+      <span class="tape"></span>
+      <span class="emoji">🎂</span>
+      <h3>Birthday boy!</h3>
+      <p>Today is your reminder to enjoy the little things and celebrate yourself.</p>
+      <span class="mini">extra cake for you ✨</span>
+    </article>
+
+    <article class="card">
+      <span class="tape"></span>
+      <span class="emoji">🦋</span>
+      <h3>Big dreams</h3>
+      <p>May you keep growing, glowing and becoming the person you dream of being.</p>
+      <span class="mini">your next chapter 🌈</span>
+    </article>
+
+    <article class="card">
+      <span class="tape"></span>
+      <span class="emoji">💌</span>
+      <h3>A little reminder</h3>
+      <p>You deserve genuine happiness, peaceful days and so many reasons to smile.</p>
+      <span class="mini">never forget that ♡</span>
+    </article>
+
+    <article class="card">
+      <span class="tape"></span>
+      <span class="emoji">🍓</span>
+      <h3>Sweet moments</h3>
+      <p>May your year be filled with fun plans, random laughter and lovely surprises.</p>
+      <span class="mini">sweet like strawberries</span>
+    </article>
+
+    <article class="card">
+      <span class="tape"></span>
+      <span class="emoji">⭐</span>
+      <h3>Your own sparkle</h3>
+      <p>Keep being yourself, chasing your goals and making your own kind of magic.</p>
+      <span class="mini">made to shine ✨</span>
+    </article>
+  </div>
+
+  <div class="washi-note">
+    🎀 A tiny handmade corner of the internet, filled with flowers,
+    happy thoughts and all the birthday wishes you deserve. 💛
+  </div>
+</section>
+
+<section class="letter-section">
+  <div class="heading">
+    <small>Something from the heart</small>
+    <h2>A little letter 💌</h2>
+    <p>There's a birthday message waiting just for you.</p>
+  </div>
+
+  <div class="letter">
+    <div class="envelope">💌</div>
+    <h3>Dear Arjun,</h3>
+    <p>Tap the button to open your little birthday letter.</p>
+
+    <button class="btn" id="letterButton"
+      onclick="toggleLetter()" style="margin-top:18px">
+      Open my letter ♡
+    </button>
+
+    <div id="letterText">
+      <p>Happy Birthday, Arjun! 🎂💗</p>
+
+      <p>
+        I hope this birthday brings you endless happiness,
+        lots of laughter and all the little things that make
+        life special. You deserve a year full of beautiful moments.
+      </p>
+
+      <p>
+        I hope you achieve your goals, feel proud of yourself
+        and always have something exciting to look forward to.
+        May every new chapter bring you something good.
+      </p>
+
+      <p>
+        Keep smiling, keep dreaming big and never stop being
+        your wonderful self. Here's to more laughter, more
+        achievements and a whole lot of happiness. 🫶
+      </p>
+
+      <p>Have the happiest birthday ever! 🎀✨</p>
+
+      <p style="text-align:right">
+        With lots of love,<br>
+        Your favourite person ♡
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="heading">
+    <small>Birthday wishes</small>
+    <h2>Three little wishes for you 🌈</h2>
+  </div>
+
+  <div class="wishes">
+    <div class="wish">
+      <span class="emoji">🌈</span>
+      <strong>Lots of happiness</strong>
+      <p>May your days be brighter and your smiles bigger.</p>
+    </div>
+
+    <div class="wish">
+      <span class="emoji">🧿</span>
+      <strong>Good things only</strong>
+      <p>May life bring you love, luck and peace.</p>
+    </div>
+
+    <div class="wish">
+      <span class="emoji">🚀</span>
+      <strong>Dreams come true</strong>
+      <p>May your hard work lead you to amazing things.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <span style="font-size:42px">🎀🌷💗</span>
+  <h2>One last surprise...</h2>
+  <p>
+    This little page is all about you, Arjun.<br>
+    Eat cake, laugh lots and make this birthday unforgettable! 🎂
+  </p>
+  <br>
+  <button class="btn" onclick="celebrate()">Tap for birthday magic 🎉</button>
+</section>
+
+<footer>
+  Made with ♡ just for Arjun · Happy Birthday 🎂
+</footer>
+
+<script>
+function toggleLetter() {
+  const letter = document.getElementById('letterText');
+  const button = document.getElementById('letterButton');
+
+  letter.classList.toggle('open');
+  button.textContent = letter.classList.contains('open')
+    ? 'Close letter ♡'
+    : 'Open my letter ♡';
+}
+
+function celebrate() {
+  const emojis = ['💗','✨','🎉','🌸','⭐','🎀','💛','🦋'];
+
+  for (let i = 0; i < 75; i++) {
+    const piece = document.createElement('span');
+    piece.className = 'confetti';
+    piece.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    piece.style.left = Math.random() * 100 + 'vw';
+    piece.style.fontSize = (16 + Math.random() * 22) + 'px';
+    piece.style.animationDuration = (2 + Math.random() * 3) + 's';
+
+    document.body.appendChild(piece);
+    setTimeout(() => piece.remove(), 5000);
+  }
+}
+</script>
+
+</body>
+</html>
