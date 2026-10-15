@@ -547,5 +547,156 @@ function celebrate() {
 }
 </script>
 
+
+<style>
+.bday-cake-section {
+  text-align: center;
+  padding: 35px 15px;
+  margin: 25px auto;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #fff0e6, #ffd9e8);
+  color: #713b32;
+  font-family: cursive;
+}
+.bday-cake-section h2 {
+  color: #c04479;
+  font-size: 28px;
+}
+.choco-cake {
+  position: relative;
+  width: 220px;
+  height: 125px;
+  margin: 65px auto 25px;
+  cursor: pointer;
+}
+.cake-top {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 200px;
+  height: 55px;
+  border-radius: 50%;
+  background: #63301f;
+  border: 4px solid #8d4a32;
+  z-index: 2;
+}
+.cake-body {
+  position: absolute;
+  top: 27px;
+  left: 10px;
+  width: 200px;
+  height: 75px;
+  border-radius: 0 0 18px 18px;
+  background: linear-gradient(90deg, #572619, #91452b, #572619);
+  border-bottom: 8px solid #462016;
+}
+.drip {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  width: 180px;
+  height: 23px;
+  background: #422016;
+  border-radius: 0 0 14px 14px;
+  z-index: 3;
+}
+.candle {
+  position: absolute;
+  bottom: 85px;
+  left: 101px;
+  width: 18px;
+  height: 57px;
+  background: repeating-linear-gradient(
+    45deg, #fff0c9 0 8px, #e88aaa 8px 13px
+  );
+  border-radius: 5px 5px 2px 2px;
+  z-index: 4;
+}
+.flame {
+  position: absolute;
+  bottom: 139px;
+  left: 101px;
+  width: 18px;
+  height: 27px;
+  background: #ff9b28;
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: 0 0 18px #ffb52e;
+  z-index: 5;
+  animation: flicker .5s infinite alternate;
+}
+.flame.off { display: none; }
+@keyframes flicker {
+  from { transform: scale(1) rotate(-5deg); }
+  to { transform: scale(.85) rotate(5deg); }
+}
+#birthday-finale {
+  display: none;
+  color: #c04479;
+  font-size: 26px;
+  font-weight: bold;
+  animation: pop .5s ease;
+}
+@keyframes pop {
+  from { transform: scale(.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+#birthday-confetti {
+  font-size: 25px;
+  line-height: 1.8;
+}
+</style>
+
+<section class="bday-cake-section">
+  <h2>Make a wish, Pagluuu! 💗</h2>
+  <p>Tap the candle to blow it out 🕯️</p>
+
+  <div class="choco-cake" id="paglu-cake"
+       role="button" tabindex="0"
+       aria-label="Blow out the birthday candle">
+    <div class="flame" id="paglu-flame"></div>
+    <div class="candle"></div>
+    <div class="cake-body"></div>
+    <div class="drip"></div>
+    <div class="cake-top"></div>
+  </div>
+
+  <p id="birthday-finale">
+    HAPPY BIRTHDAY PAGLAAA!! 💖🎂
+  </p>
+  <div id="birthday-confetti"></div>
+  <p id="cake-instruction">Make your wish and tap the candle! ✨</p>
+</section>
+
+<script>
+(function () {
+  const cake = document.getElementById("paglu-cake");
+  const flame = document.getElementById("paglu-flame");
+  const finale = document.getElementById("birthday-finale");
+  const confetti = document.getElementById("birthday-confetti");
+  const instruction = document.getElementById("cake-instruction");
+
+  function blowCandle() {
+    if (flame.classList.contains("off")) return;
+
+    flame.classList.add("off");
+    finale.style.display = "block";
+    instruction.textContent = "Your wish is on its way! 💌";
+
+    confetti.textContent =
+      "🎉 🎊 💖 ✨ 🎂 💗 🥳 🎀 💕 ✨ 🎉";
+
+    cake.setAttribute("aria-label", "Birthday candle blown out");
+  }
+
+  cake.addEventListener("click", blowCandle);
+  cake.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      blowCandle();
+    }
+  });
+})();
+</script>
+  
 </body>
 </html>
